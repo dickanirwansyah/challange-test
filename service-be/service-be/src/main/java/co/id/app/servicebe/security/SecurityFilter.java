@@ -38,7 +38,18 @@ public class SecurityFilter implements Filter {
     private static final String[] endPointIgnores = {
             "/swagger",
             "/swagger-ui/",
+            "/swagger-ui/springfox.css",
+            "/swagger-ui/swagger-ui.css",
+            "/swagger-ui/swagger-ui-bundle.js",
+            "/swagger-ui/swagger-ui-standalone-preset.js",
+            "/swagger-ui/springfox.js",
+            "/swagger-ui/favicon-32x32.png",
+            "/swagger-ui/favicon-16x16.png",
+            "/swagger-resources",
+            "/swagger-resources/configuration/ui",
+            "/swagger-resources/configuration/security",
             "/v2",
+            "/v2/api-docs",
             "/",
             "/api/v1/accounts/register",
             "/api/v1/accounts/login"
@@ -46,7 +57,7 @@ public class SecurityFilter implements Filter {
 
     /** api secure **/
     private static final String[] endpointBackOffices = {
-            "/api/v1/job/list",
+            "/api/v1/job",
     };
 
     @Override
@@ -61,7 +72,7 @@ public class SecurityFilter implements Filter {
         /** check api key internal */
         AtomicReference<Boolean> validIgnores = new AtomicReference<>();
         Arrays.stream(endPointIgnores)
-                .filter(url -> request.getRequestURI().equals(url))
+                .filter(url -> request.getRequestURI().equalsIgnoreCase(url))
                 .findAny()
                 .ifPresentOrElse(data -> validIgnores.set(true), () -> validIgnores.set(false));
 

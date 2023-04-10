@@ -6,6 +6,7 @@ import co.id.app.servicebe.model.request.LoginRequest;
 import co.id.app.servicebe.model.response.ServerResponse;
 import co.id.app.servicebe.service.accounts.LoginService;
 import co.id.app.servicebe.service.accounts.RegisterService;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 
+@Api(tags = "Accounts Controller")
 @RestController
 @RequestMapping(value = "/api/v1/accounts")
 public class AccountsController {
