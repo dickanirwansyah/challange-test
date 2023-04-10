@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "d9f4cb99-bdc6-4808-9cab-238c605826cf",
+		"name": "BE-SERVICE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "REGISTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"dickyadriansyah\",\r\n    \"role_id\" : 2,\r\n    \"password\" : \"Joni123\",\r\n    \"confirm_password\" : \"Joni123\",\r\n    \"full_name\" : \"muhammad dicky adriansyah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/accounts/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\" : \"dickanirwansyah\",\r\n    \"password\" : \"Sepuluhempat1996\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/api/v1/accounts/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JOB-LIST",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJkaWNrYW5pcndhbnN5YWgiLCJpYXQiOjE2ODExNDYzNjgsImV4cCI6MTY4MTE0OTk2OH0.n7DsL594nInJPTR2oGAH2bxJFv8ym0ON323xQM0bX7u2wDAaLkXZmCYOoPezw3ukrPSH9uBCUS8O_X6VnPbmxg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8888/api/v1/job/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"api",
+						"v1",
+						"job",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
