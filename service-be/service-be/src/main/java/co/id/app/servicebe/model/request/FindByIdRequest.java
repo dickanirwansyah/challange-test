@@ -7,4 +7,5 @@ import lombok.Setter;
 @Setter
 public class FindByIdRequest extends BaseRequest{
     private Long id;
+    private String jobId;
 }

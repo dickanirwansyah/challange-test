@@ -22,3 +22,4 @@ internal:
 uri:
   surrounding:
     recruitment-position: http://dev3.dansmultipro.co.id/api/recruitment/positions.json
+    recruitment-position-byid: http://dev3.dansmultipro.co.id/api/recruitment/positions/
